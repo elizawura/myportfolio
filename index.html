@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <section class="hero">
@@ -150,28 +151,127 @@
       <button>hire me</button>
     </section>
     <section class="project">
-      <input type="radio" name="position" checked />
-      <input type="radio" name="position" />
-      <input type="radio" name="position" />
-      <input type="radio" name="position" />
-      <!-- <input type="radio" name="position" /> -->
-      <main id="carousel">
-        <div class="item" id="caro1">
-          <img src="./img/finance.png" alt="" srcset="" />
+      <h1>projects</h1>
+      <input type="radio" id="s-1" name="slider-control" checked="checked" />
+      <input type="radio" id="s-2" name="slider-control" />
+      <input type="radio" id="s-3" name="slider-control" />
+      <div class="js-slider">
+        <figure class="js-slider_item img-1">
+          <div class="js-slider_img">
+            <img class="c-img-w-full" src="./img/finance.png" alt="" />
+          </div>
+          <figcaption class="wo-caption">
+            <h3 class="wo-h3">
+              <div class="c-label">finance website</div>
+              <br class="view-sm mb-s" />
+            </h3>
+            <!-- <ul class="wo-credit">
+              <li>摺物118枚 寛政元-12年 (1789-1800)</li>
+              <li>島根県立美術館(永田コレクション)</li>
+              <li>
+                通期展示 <span class="c-txt-s">※4期に分けて全点を展示</span>
+              </li>
+            </ul> -->
+          </figcaption>
+        </figure>
+        <figure class="js-slider_item img-2">
+          <div class="js-slider_img">
+            <img class="c-img-h-full" src="./img/todoapp.png" alt="" />
+          </div>
+          <figcaption class="wo-caption">
+            <h3 class="wo-h3">
+              <div class="c-label">to do app</div>
+              <br class="view-sm mb-s" />
+            </h3>
+            <!-- <ul class="wo-credit">
+              <li>大判 享和年間 (1801-04)</li>
+              <li>リー・ダークス・コレクション</li>
+              <li>展示期間：1月30日 (水) ～ 2月18日 (月)</li>
+            </ul> -->
+          </figcaption>
+        </figure>
+        <figure class="js-slider_item img-3">
+          <div class="js-slider_img">
+            <img class="c-img-h-full" src="./img/naturetour.png" alt="" />
+          </div>
+          <figcaption class="wo-caption">
+            <h3 class="wo-h3">
+              <div class="c-label">nature tour</div>
+              <br class="view-sm mb-s" />
+            </h3>
+            <!-- <ul class="wo-credit">
+              <li>大判 享和年間 (1801-04)</li>
+              <li>米・個人蔵</li>
+              <li>展示期間：1月30日 (水) ～ 2月18日 (月)</li>
+            </ul> -->
+          </figcaption>
+        </figure>
+        <div class="js-slider_nav">
+          <label class="js-slider_nav_item s-nav-1 prev" for="s-3"></label>
+          <label class="js-slider_nav_item s-nav-1 next" for="s-2"></label>
+          <label class="js-slider_nav_item s-nav-2 prev" for="s-1"></label>
+          <label class="js-slider_nav_item s-nav-2 next" for="s-3"></label>
+          <label class="js-slider_nav_item s-nav-3 prev" for="s-2"></label>
+          <label class="js-slider_nav_item s-nav-3 next" for="s-1"></label>
         </div>
-        <div id="caro2" class="item"></div>
-        <div id="caro3" class="item"></div>
-        <div id="caro4" class="item">
-          <figure class="hover-img">
-            <img src="https://picsum.photos/id/200/440/320.jpg" />
-            <figcaption>
-              <h3>Lorem <br />Ipsum</h3>
-            </figcaption>
-          </figure>
+        <div class="js-slider_indicator">
+          <div class="js-slider-indi indi-1"></div>
+          <div class="js-slider-indi indi-2"></div>
+          <div class="js-slider-indi indi-3"></div>
         </div>
-        <!--  <div id="caro5" class="item"></div> -->
-      </main>
+      </div>
     </section>
-    <section></section>
+    <section class="contact">
+      <h2>Popup Form</h2>
+      <p>
+        Click on the button at the bottom of this page to open the login form.
+      </p>
+      <p>
+        Note that the button and the form is fixed - they will always be
+        positioned to the bottom of the browser window.
+      </p>
+
+      <button class="open-button" onclick="openForm()">Open Form</button>
+      <div class="contact-container" id="myForm">
+        <div class="left-col"></div>
+        <div class="right-col">
+          <h1>Contact us</h1>
+
+          <form id="contact-form" method="post" class="form-container">
+            <label for="name">Full name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Full Name"
+              required
+            />
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email Address"
+              required
+            />
+            <label for="message">Message</label>
+            <textarea
+              rows="6"
+              placeholder="Your Message"
+              id="message"
+              name="message"
+              required
+            ></textarea>
+            <!--<a href="javascript:void(0)">-->
+            <button type="submit" class="btn">submit</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">
+              Close</button
+            ><!--</a>-->
+          </form>
+          <div id="error"></div>
+          <div id="success-msg"></div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
