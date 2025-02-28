@@ -96,11 +96,17 @@ header {
 
 .hero {
   background-image: url(../img/finger.png);
-  height: 110vh;
+  width: 100%;
+  height: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgba(112, 99, 99, 0.822);
+}
+
+.hero a:active {
+  color: brown;
+  background-color: black;
 }
 
 .navbar a:hover {
@@ -151,7 +157,7 @@ header {
 }
 .drop ul li ul {
   position: absolute;
-  width: 200px;
+  width: 80%;
   display: none;
 }
 .drop ul li ul li {
@@ -171,7 +177,20 @@ header {
   color: rgb(126, 49, 49);
   text-transform: uppercase;
   text-wrap: wrap;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
+  width: 50%;
+  background: -webkit-linear-gradient(#ff0202, #6e3636);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: #000000;
+  animation: blinker 1.5s linear infinite;
+  color: red;
+  font-family: sans-serif;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .text p {
@@ -179,17 +198,22 @@ header {
   text-transform: capitalize;
   text-wrap: wrap;
   /* backdrop-filter: blur(10px); */
+  background: -webkit-linear-gradient(#000000, #3d1c1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: xx-large;
 }
 
 .text {
-  display: inline-block;
+  /* display: inline-block; */
   text-align: left;
   text-wrap: wrap;
-  align-items: baseline;
-  position: relative;
-  top: 36%;
-  left: 3.5%;
-  padding: 15px;
+  /* align-items: baseline; */
+  padding-top: 250px;
+  padding-left: 50px;
+  /* left: 3.5%; */
+  /* padding: 15px; */
+  line-height: 2;
 }
 
 .hero-buttons {
@@ -237,11 +261,12 @@ header {
 }
 
 .icon-bar {
-  width: 50px;
-  margin-left: 50px;
+  width: 20%;
+  /* margin-left: 50px; */
   position: relative;
-  top: 25%;
-  left: 90%;
+  /* top: 50%; */
+  left: 85%;
+  bottom: 0%;
 }
 
 .icon-bar a {
@@ -260,7 +285,8 @@ header {
 .myserv {
   background-color: rgb(112, 99, 99);
   text-align: center;
-  height: 90vh;
+  width: 100vw;
+  height: auto;
 }
 
 .myserv h1 {
@@ -274,11 +300,12 @@ header {
 
 .objects {
   display: grid;
+  width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: rgb(112, 99, 99);
   height: 50vh;
-  padding-top: 100px;
-  padding-left: 100px;
+  padding-top: 60px;
+  padding-left: 15px;
   padding-right: 10px;
   transition: all 0.3s ease;
 }
@@ -296,8 +323,8 @@ header {
   border-style: solid;
   border-color: black;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 15vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -324,8 +351,8 @@ header {
   border-style: solid;
   border-color: black;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 15vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -350,8 +377,8 @@ header {
   border-style: solid;
   border-color: black;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 15vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -376,8 +403,8 @@ header {
   border-style: solid;
   border-color: black;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 15vw;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -406,20 +433,33 @@ header {
   border: none;
   text-align: center;
   margin-bottom: 150px;
-  width: 20vw;
+  width: 15%;
   font-weight: bold;
+  animation: glowing 1300ms infinite;
 }
 
 .myserv button:hover {
-  color: brown;
+  border-radius: 5%;
   background-color: black;
-  font-size: larger;
   padding: 8px 8px;
+  color: brown;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  border: none;
+  text-align: center;
+  margin-bottom: 150px;
+  width: 15%;
+  font-weight: bold;
 }
 
 .about {
-  background-color: #c2b7b7;
+  background-color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 100%;
+  height: auto;
 }
 
 .about h1 {
@@ -432,18 +472,27 @@ header {
 }
 
 .page-2 {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 5rem;
-  background-color: #c2b7b7;
+  padding-left: 50px;
+  background-color: white;
   transition: all 0.3s ease;
+  padding-bottom: 50px;
 }
+
+/* .laptop {
+  background-image: url(../img/finger.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
 
 .laptop img {
   padding-top: 80px;
-  width: 500px;
-  height: 70vh;
-  border-radius: 20%;
+  border-radius: 50%;
+  width: 50%;
+  height: auto;
 }
 
 .info {
@@ -685,27 +734,141 @@ figcaption {
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: relative;
-  top: 0;
-  width: 280px;
+/* .contact {
+  height: 40vh;
+} */
+
+.contact {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: #855757;
 }
 
+.contact h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 4rem;
+  color: white;
+  width: 20%;
+  background-color: black;
+  color: brown;
+  font-size: 2rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.message {
+  display: block;
+  text-align: center;
+  margin: auto;
+  text-wrap: none;
+}
+.message :first-child {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 3rem;
+  color: black;
+  text-transform: capitalize;
+  /* text-align: justify; */
+  padding-left: 5rem;
+  padding-right: 10rem;
+}
+
+.message :nth-child(2) {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2rem;
+  color: #6d0b13;
+  text-wrap: none;
+  /* text-align: justify; */
+  padding-left: 15rem;
+  padding-right: 10rem;
+}
+
+.message :nth-child(3) {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 2.5rem;
+  color: black;
+  text-transform: capitalize;
+  /* text-align: justify; */
+  padding-left: 15rem;
+  padding-right: 10rem;
+}
+
+.open-button {
+  background-color: black;
+  -webkit-border-radius: 60px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  animation: glowing 1300ms infinite;
+  /* -ms-transform: translatex(-40%);
+  transform: translatex(-40%); */
+  position: relative;
+  top: 30%;
+  left: 40%;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: brown;
+    box-shadow: 0 0 5px brown;
+  }
+  50% {
+    background-color: rgb(223, 34, 34);
+    box-shadow: 0 0 20px rgb(223, 34, 34);
+  }
+  100% {
+    background-color: brown;
+    box-shadow: 0 0 5px brown;
+  }
+}
+
+.open-button:hover {
+  background-color: brown;
+  color: black;
+  font-weight: bold;
+  font-size: x-large;
+  padding: 10px 20px;
+  width: 170px;
+  border-radius: 50%;
+  height: 170px;
+  border: none;
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+  cursor: pointer;
+  /* position: relative;
+  top: 30%;
+  left: 50%; */
+}
+
+.contact {
+  padding-bottom: 50px;
+}
 .contact-container {
-  width: 100vw;
-  height: 80vh;
+  width: 60%;
+  height: auto;
   background-color: #f1f1f1;
   display: none;
   position: fixed;
   bottom: 0;
   right: 15px;
-  border: 3px solid #f1f1f1;
+  left: 15px;
+  /* border: 3px solid #f1f1f1; */
   z-index: 9;
 }
 .left-col {
@@ -717,11 +880,11 @@ figcaption {
 }
 
 .right-col {
-  width: 40%;
+  width: 90%;
   height: auto;
-  padding: 5rem 3.5rem;
-  background-color: red;
-  margin-left: 5000px;
+  padding: 2rem 3rem;
+  background-color: rgb(226, 12, 12);
+  margin-left: 0px;
 }
 
 .right-col h1,
@@ -814,6 +977,27 @@ button:hover {
   opacity: 0.8;
 }
 
+.icon-bar2 {
+  width: 50px;
+  margin-left: 50px;
+  position: relative;
+  top: -50%;
+  left: 80%;
+}
+
+.icon-bar2 a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: black;
+  font-size: 20px;
+}
+
+.icon-bar2 a:hover {
+  background-color: brown;
+}
+
 #error,
 #success-msg {
   width: 40vw;
@@ -848,3 +1032,106 @@ button:hover {
     width: 7rem;
   }
 } */
+
+.site-footer {
+  background-color: black;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  /* padding: 45px 0 20px; */
+  font-size: 15px;
+  line-height: 24px;
+  color: brown;
+}
+
+.site-footer a {
+  color: #737373;
+}
+.site-footer a:hover {
+  color: brown;
+  text-decoration: none;
+}
+
+.footer-links.inline li {
+  display: inline-block;
+}
+.site-footer .social-icons {
+  text-align: right;
+}
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #33353d;
+}
+.copyright-text {
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .site-footer [class^="col-"] {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
+  }
+}
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px;
+}
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: black;
+  background-color: brown;
+}
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
+}

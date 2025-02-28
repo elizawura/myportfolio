@@ -48,19 +48,19 @@
             </li>
 
             <li role="menuitem" aria-label="menu item 2" class="">
-              <a href="/"> About</a>
+              <a href="#about"> About</a>
             </li>
 
             <li role="menuitem" aria-label="menu item 3" class="">
-              <a href="/">Skills</a>
+              <a href="#skills">Skills</a>
             </li>
 
             <li role="menuitem" aria-label="menu item 4" class="">
-              <a href="/">Projects</a>
+              <a href="#project">Projects</a>
             </li>
 
             <li role="menuitem" aria-label="menu item 5" class="">
-              <a href="/">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
             <li role="menuitem" aria-label="menu item 6" class="tofc"></li>
           </ul>
@@ -83,7 +83,7 @@
 
       <div class="text">
         <p>Hello, I am</p>
-        <h1>Elizabeth Sampong</h1>
+        <h1 id="blink">Elizabeth Sampong</h1>
         <p>web designer & developer</p>
         <div class="hero-buttons">
           <button id="hire">Hire me</button>
@@ -101,12 +101,12 @@
       </div>
     </section>
 
-    <section>
+    <section id="about">
       <div class="about"><h1>About me</h1></div>
 
       <span class="page-2">
         <div class="laptop">
-          <img src="./img/finger.png" alt="screen" />
+          <img src="./img/es.jpg" alt="screen" />
         </div>
 
         <div class="info">
@@ -128,7 +128,7 @@
       </span>
     </section>
 
-    <section class="myserv">
+    <section id="skills" class="myserv">
       <h1>skills</h1>
       <div class="objects">
         <div id="html" class="html">
@@ -148,9 +148,9 @@
           <h3>website</h3>
         </div>
       </div>
-      <button>hire me</button>
+      <button onclick="openForm()">hire me</button>
     </section>
-    <section class="project">
+    <section id="project" class="project">
       <h1>projects</h1>
       <input type="radio" id="s-1" name="slider-control" checked="checked" />
       <input type="radio" id="s-2" name="slider-control" />
@@ -221,19 +221,18 @@
         </div>
       </div>
     </section>
-    <section class="contact">
-      <h2>Popup Form</h2>
-      <p>
-        Click on the button at the bottom of this page to open the login form.
-      </p>
-      <p>
-        Note that the button and the form is fixed - they will always be
-        positioned to the bottom of the browser window.
-      </p>
+    <section id="contact" class="contact">
+      <h2>contact</h2>
+      <div class="message">
+        <p>get in touch with me</p>
+        <p>to make your dream website</p>
+        <p>a reality</p>
+      </div>
 
-      <button class="open-button" onclick="openForm()">Open Form</button>
+      <button class="open-button" onclick="openForm()">
+        Open Form <i class="fa fa-paper-plane-o"></i>
+      </button>
       <div class="contact-container" id="myForm">
-        <div class="left-col"></div>
         <div class="right-col">
           <h1>Contact us</h1>
 
@@ -272,6 +271,47 @@
           <div id="success-msg"></div>
         </div>
       </div>
+    </section>
+
+    <section class="footersec">
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">
+                Copyright &copy; 2025 All Rights Reserved by
+                <a href="#">Elizabeth</a>.
+              </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li>
+                  <a class="active" href="#"
+                    ><i class="fa fa-facebook" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-linkedin" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-globe"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </section>
   </body>
 </html>
