@@ -86,8 +86,10 @@
         <h1 id="blink">Elizabeth Sampong</h1>
         <p>web designer & developer</p>
         <div class="hero-buttons">
-          <button id="hire">Hire me</button>
-          <button id="cv">download cv</button>
+          <button id="hire" onclick="openForm()">Hire me</button>
+          <button id="cv">
+            download cv<i class="fa fa-download" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
       <div class="icon-bar">
@@ -121,9 +123,14 @@
             accusantium soluta reprehenderit hic fugit quisquam voluptatum
             dolorem quo autem vitae dolor voluptates velit in eos nemo.
           </p>
-          <button id="cv">
-            download cv <i class="fa fa-download" aria-hidden="true"></i>
-          </button>
+          <form
+            method="get"
+            action="./img/Elizabeth Sampong ALX Data Analysis Resume.pdf"
+          >
+            <button type="submit" id="cv">
+              download cv <i class="fa fa-download" aria-hidden="true"></i>
+            </button>
+          </form>
         </div>
       </span>
     </section>
