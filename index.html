@@ -11,79 +11,36 @@
     />
     <script src="./js/script.js" defer></script>
   </head>
+
   <body>
+    <nav>
+      <div class="topnav" id="myTopnav">
+        <div class="logo">
+          <img src="./img/eslogo.png" alt="" srcset="" height="57" />
+        </div>
+
+        <a href="#contact">contacts </a>
+        <a href="#project">projects </a>
+
+        <a href="#skills">skills </a>
+        <a href="#about">about </a>
+
+        <div class="right-lnk">
+          <a href="#">home</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </nav>
+
     <section class="hero">
       <div class="overlay"></div>
 
-      <!-- <nav class="navbar">
-		  <div class="navlinks">
-			<span class="logo"
-			  ><img src="./img/eslogo.png" alt="" srcset="" height="70"
-			/></span>
-			<span><a href="http://">Home</a></span>
-			<span><a href="http://">about</a></span>
-			<span><a href="http://"> Skills </a></span>
-			<span><a href="http://">Experiences </a></span>
-			<span><a href="http://">Projects </a></span>
-			<span><a href="http://">Contact </a></span>
-	
-		  <div class="homebtn">
-        <i class="fa fa-bars"></i>
-		  </div> 
-		</nav> -->
-
-      <!-- <div class="triptype">
-		  <button>Date</button>
-		  <button>Type</button>
-		</div> -->
-
-      <header>
-        <span class="logo"
-          ><img src="./img/eslogo.png" alt="" srcset="" height="70"
-        /></span>
-        <nav class="navbar" tabindex="0">
-          <ul role="menubar" aria-haspopup="true">
-            <li role="menuitem" aria-label="menu item 1" class="active">
-              <a href="/">Home</a>
-            </li>
-
-            <li role="menuitem" aria-label="menu item 2" class="">
-              <a href="#about"> About</a>
-            </li>
-
-            <li role="menuitem" aria-label="menu item 3" class="">
-              <a href="#skills">Skills</a>
-            </li>
-
-            <li role="menuitem" aria-label="menu item 4" class="">
-              <a href="#project">Projects</a>
-            </li>
-
-            <li role="menuitem" aria-label="menu item 5" class="">
-              <a href="#contact">Contact</a>
-            </li>
-            <li role="menuitem" aria-label="menu item 6" class="tofc"></li>
-          </ul>
-          <div class="drop">
-            <ul>
-              <li>
-                <a href="#"><i class="fa fa-bars"></i></a>
-                <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">about</a></li>
-                  <li><a href="#">skills</a></li>
-                  <li><a href="#">projects</a></li>
-                  <li><a href="#">contacts</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
       <div class="text">
-        <p>Hello, I am</p>
-        <h1 id="blink">Elizabeth Sampong</h1>
+        <p class="text-p">Hello, I am</p>
+        <div class="text-h1"><h1 id="blink">Elizabeth Sampong</h1></div>
+
         <p>web designer & developer</p>
         <div class="hero-buttons">
           <button id="hire" onclick="openForm()">Hire me</button>
@@ -107,11 +64,11 @@
       </div>
     </section>
 
-    <section id="about">
-      <div class="about"><h1>About me</h1></div>
+    <section>
+      <div class="about" id="about"><h1>About me</h1></div>
 
       <span class="page-2">
-        <div class="laptop">
+        <div class="about-pic">
           <img src="./img/es.jpg" alt="screen" />
         </div>
 
@@ -158,6 +115,7 @@
       </div>
       <button onclick="openForm()">hire me</button>
     </section>
+
     <section id="project" class="project">
       <h1>projects</h1>
       <input type="radio" id="s-1" name="slider-control" checked="checked" />
@@ -166,36 +124,39 @@
       <div class="js-slider">
         <figure class="js-slider_item img-1">
           <div class="js-slider_img">
-            <img class="c-img-w-full" src="./img/finance.png" alt="" />
+            <a href="https://elizabethfinance.netlify.app/"
+              ><img
+                class="c-img-w-full"
+                src="./img/finance.jpeg"
+                alt="finance website"
+            /></a>
           </div>
           <figcaption class="wo-caption">
             <h3 class="wo-h3">
-              <div class="c-label">finance website</div>
+              <a href="https://elizabethfinance.netlify.app/"
+                ><div class="c-label">finance website</div></a
+              >
               <br class="view-sm mb-s" />
             </h3>
-            <!-- <ul class="wo-credit">
-              <li>摺物118枚 寛政元-12年 (1789-1800)</li>
-              <li>島根県立美術館(永田コレクション)</li>
-              <li>
-                通期展示 <span class="c-txt-s">※4期に分けて全点を展示</span>
-              </li>
-            </ul> -->
           </figcaption>
         </figure>
         <figure class="js-slider_item img-2">
           <div class="js-slider_img">
-            <img class="c-img-h-full" src="./img/todoapp.png" alt="" />
+            <a href="https://elizabethtodosite.netlify.app/"
+              ><img
+                class="c-img-h-full"
+                src="./img/todoapp.jpeg"
+                alt="to do website"
+            /></a>
           </div>
           <figcaption class="wo-caption">
             <h3 class="wo-h3">
-              <div class="c-label">to do app</div>
+              <a href="https://elizabethtodosite.netlify.app/"
+                ><div class="c-label">to do app</div></a
+              >
+
               <br class="view-sm mb-s" />
             </h3>
-            <!-- <ul class="wo-credit">
-              <li>大判 享和年間 (1801-04)</li>
-              <li>リー・ダークス・コレクション</li>
-              <li>展示期間：1月30日 (水) ～ 2月18日 (月)</li>
-            </ul> -->
           </figcaption>
         </figure>
         <figure class="js-slider_item img-3">
@@ -207,11 +168,6 @@
               <div class="c-label">nature tour</div>
               <br class="view-sm mb-s" />
             </h3>
-            <!-- <ul class="wo-credit">
-              <li>大判 享和年間 (1801-04)</li>
-              <li>米・個人蔵</li>
-              <li>展示期間：1月30日 (水) ～ 2月18日 (月)</li>
-            </ul> -->
           </figcaption>
         </figure>
         <div class="js-slider_nav">
